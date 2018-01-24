@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "HellTableViewCell.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *Tabela;
@@ -19,6 +20,7 @@
     [super viewDidLoad];
     self.Tabela.delegate = self;
     self.Tabela.dataSource = self;
+    [self.Tabela registerNib: [UINib nibWithNibName:@"Hell" bundle:nil] forCellReuseIdentifier:@"hell"];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -36,9 +38,9 @@
     return 3;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *Cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-    Cell.textLabel.text = @"Teste";
-        return Cell;
+    HellTableViewCell *Cell = (HellTableViewCell *) [self.Tabela dequeueReusableCellWithIdentifier:@"hell" forIndexPath:indexPath];
+    Cell.Texto1.text = @"Hell-o world";
+    return Cell;
 }
 
 @end

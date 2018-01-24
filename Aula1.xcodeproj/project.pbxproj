@@ -13,6 +13,8 @@
 		0353F2EA2017BD7700BC2398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0353F2E92017BD7700BC2398 /* Assets.xcassets */; };
 		0353F2ED2017BD7700BC2398 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0353F2EB2017BD7700BC2398 /* LaunchScreen.storyboard */; };
 		0353F2F02017BD7800BC2398 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0353F2EF2017BD7800BC2398 /* main.m */; };
+		0353F2F9201918D700BC2398 /* Hell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0353F2F8201918D700BC2398 /* Hell.xib */; };
+		0353F2FF201919EE00BC2398 /* HellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0353F2FE201919EE00BC2398 /* HellTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		0353F2EC2017BD7700BC2398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0353F2EE2017BD7800BC2398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0353F2EF2017BD7800BC2398 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0353F2F8201918D700BC2398 /* Hell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Hell.xib; sourceTree = "<group>"; };
+		0353F2FD201919EE00BC2398 /* HellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HellTableViewCell.h; sourceTree = "<group>"; };
+		0353F2FE201919EE00BC2398 /* HellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HellTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +72,9 @@
 				0353F2EB2017BD7700BC2398 /* LaunchScreen.storyboard */,
 				0353F2EE2017BD7800BC2398 /* Info.plist */,
 				0353F2EF2017BD7800BC2398 /* main.m */,
+				0353F2F8201918D700BC2398 /* Hell.xib */,
+				0353F2FD201919EE00BC2398 /* HellTableViewCell.h */,
+				0353F2FE201919EE00BC2398 /* HellTableViewCell.m */,
 			);
 			path = Aula1;
 			sourceTree = "<group>";
@@ -131,6 +139,7 @@
 			files = (
 				0353F2ED2017BD7700BC2398 /* LaunchScreen.storyboard in Resources */,
 				0353F2EA2017BD7700BC2398 /* Assets.xcassets in Resources */,
+				0353F2F9201918D700BC2398 /* Hell.xib in Resources */,
 				0353F2E82017BD7700BC2398 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +153,7 @@
 			files = (
 				0353F2E52017BD7700BC2398 /* ViewController.m in Sources */,
 				0353F2F02017BD7800BC2398 /* main.m in Sources */,
+				0353F2FF201919EE00BC2398 /* HellTableViewCell.m in Sources */,
 				0353F2E22017BD7700BC2398 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
