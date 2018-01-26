@@ -11,6 +11,7 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *Tabela;
+@property NSMutableArray *Vetor;
 
 @end
 
@@ -21,6 +22,7 @@
     self.Tabela.delegate = self;
     self.Tabela.dataSource = self;
     [self.Tabela registerNib: [UINib nibWithNibName:@"Hell" bundle:nil] forCellReuseIdentifier:@"hell"];
+    self.Vetor = [[NSMutableArray alloc] initWithArray:@[@"primeiro", @"segundo"]];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -32,15 +34,23 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return self.Vetor.count;
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 3;
+    return 1;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     HellTableViewCell *Cell = (HellTableViewCell *) [self.Tabela dequeueReusableCellWithIdentifier:@"hell" forIndexPath:indexPath];
-    Cell.Texto1.text = @"Hell-o world";
+    Cell.Texto1.text = (NSString *) [self.Vetor objectAtIndex:indexPath.row];
     return Cell;
+}
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.Vetor removeObjectAtIndex:indexPath.row];
+    [self.Tabela reloadData];
 }
 
 @end
